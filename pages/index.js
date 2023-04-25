@@ -26,6 +26,7 @@ export default function Home() {
       },
       body: JSON.stringify({ priceMin, priceMax, gender, age, hobbies }),
     });
+    console.log(JSON.stringify({ priceMin, priceMax, gender, age, hobbies }));
     const data = await response.json();
     setResult(data.result.replaceAll('\\n', '<br />'));
     setLoading(false);
