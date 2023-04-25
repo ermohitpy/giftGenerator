@@ -5,6 +5,8 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
+console.log('============>',process.env.OPENAI_API_KEY);
+
 export default async function (req, res) {
   if (!configuration.apiKey) {
     res.status(500).json({
